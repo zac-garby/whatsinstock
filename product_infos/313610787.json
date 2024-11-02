@@ -1,0 +1,427 @@
+{
+  "__typename": "ProductType",
+  "id": "313610787",
+  "baseProductId": "91822029",
+  "isRestrictedOrderAmendment": null,
+  "gtin": "05060947544390",
+  "tpnb": "91822029",
+  "tpnc": "313610787",
+  "title": "Monster Energy Ultra 9 X 500Ml",
+  "description": [
+    "Carbonated Energy Drink with Taurine, Ginseng, Caffeine, L-Carnitine and B Vitamins with Sweeteners."
+  ],
+  "brandName": "MONSTER",
+  "isInFavourites": null,
+  "defaultImageUrl": "https://digitalcontent.api.tesco.com/v2/media/ghs/3a5640c1-2f97-4d44-86d1-23f3fbda9664/b89002de-39d6-45af-91a6-f0a649781524_189241903.jpeg?h=225&w=225",
+  "superDepartmentName": "Drinks",
+  "superDepartmentId": "b;RHJpbmtz",
+  "departmentName": "Sports & Energy Drinks",
+  "departmentId": "b;RHJpbmtzJTdDU3BvcnRzJTIwJiUyMEVuZXJneSUyMERyaW5rcw==",
+  "aisleName": "Energy Drinks",
+  "aisleId": "b;RHJpbmtzJTdDU3BvcnRzJTIwJiUyMEVuZXJneSUyMERyaW5rcyU3Q0VuZXJneSUyMERyaW5rcw==",
+  "shelfName": "Sugar Free Energy & Stimulant Drinks",
+  "displayType": "Quantity",
+  "shelfId": "b;RHJpbmtzJTdDU3BvcnRzJTIwJiUyMEVuZXJneSUyMERyaW5rcyU3Q0VuZXJneSUyMERyaW5rcyU3Q1N1Z2FyJTIwRnJlZSUyMEVuZXJneSUyMCYlMjBTdGltdWxhbnQlMjBEcmlua3M=",
+  "averageWeight": null,
+  "bulkBuyLimit": 25,
+  "bulkBuyLimitGroupId": "G00002502",
+  "bulkBuyLimitMessage": "You have reached the maximum quantity for this product",
+  "groupBulkBuyLimit": 0,
+  "isForSale": true,
+  "isNew": false,
+  "status": "AvailableForSale",
+  "productType": "SingleProduct",
+  "charges": [],
+  "seller": null,
+  "images": {
+    "__typename": "ProductImagesType",
+    "display": [
+      {
+        "__typename": "ProductAlternativeImageType",
+        "default": {
+          "__typename": "ProductImageType",
+          "url": "https://digitalcontent.api.tesco.com/v2/media/ghs/3a5640c1-2f97-4d44-86d1-23f3fbda9664/b89002de-39d6-45af-91a6-f0a649781524_189241903.jpeg?h=225&w=225",
+          "originalUrl": "https://digitalcontent.api.tesco.com/v2/media/ghs/3a5640c1-2f97-4d44-86d1-23f3fbda9664/b89002de-39d6-45af-91a6-f0a649781524_189241903.jpeg?h=225&w=225"
+        },
+        "zoom": {
+          "__typename": "ProductImageType",
+          "url": "https://digitalcontent.api.tesco.com/v2/media/ghs/3a5640c1-2f97-4d44-86d1-23f3fbda9664/b89002de-39d6-45af-91a6-f0a649781524_189241903.jpeg?h=540&w=540"
+        }
+      },
+      {
+        "__typename": "ProductAlternativeImageType",
+        "default": {
+          "__typename": "ProductImageType",
+          "url": "https://digitalcontent.api.tesco.com/v2/media/ghs/c7c643ae-05bb-4519-805a-c3c714cb9856/1adfc678-ed8e-4fa6-a49b-390ba731f69c_2147328649.jpeg?h=225&w=225",
+          "originalUrl": "https://digitalcontent.api.tesco.com/v2/media/ghs/c7c643ae-05bb-4519-805a-c3c714cb9856/1adfc678-ed8e-4fa6-a49b-390ba731f69c_2147328649.jpeg?h=225&w=225"
+        },
+        "zoom": {
+          "__typename": "ProductImageType",
+          "url": "https://digitalcontent.api.tesco.com/v2/media/ghs/c7c643ae-05bb-4519-805a-c3c714cb9856/1adfc678-ed8e-4fa6-a49b-390ba731f69c_2147328649.jpeg?h=540&w=540"
+        }
+      },
+      {
+        "__typename": "ProductAlternativeImageType",
+        "default": {
+          "__typename": "ProductImageType",
+          "url": "https://digitalcontent.api.tesco.com/v2/media/ghs/55c79a02-d01d-4e4c-aa04-3c25753226d0/41fd823b-709e-4e33-88aa-25de1e2be658_812738716.jpeg?h=225&w=225",
+          "originalUrl": "https://digitalcontent.api.tesco.com/v2/media/ghs/55c79a02-d01d-4e4c-aa04-3c25753226d0/41fd823b-709e-4e33-88aa-25de1e2be658_812738716.jpeg?h=225&w=225"
+        },
+        "zoom": {
+          "__typename": "ProductImageType",
+          "url": "https://digitalcontent.api.tesco.com/v2/media/ghs/55c79a02-d01d-4e4c-aa04-3c25753226d0/41fd823b-709e-4e33-88aa-25de1e2be658_812738716.jpeg?h=540&w=540"
+        }
+      }
+    ]
+  },
+  "foodIcons": [
+    "Vegan",
+    "Vegetarian"
+  ],
+  "shelfLife": null,
+  "restrictions": [],
+  "distributorAddress": null,
+  "manufacturerAddress": {
+    "__typename": "AddressType",
+    "addressLine1": "(UK) Monster Energy UK Limited,",
+    "addressLine2": "Unit 51,",
+    "addressLine3": "Segro Park,",
+    "addressLine4": "Greenford Central,",
+    "addressLine5": "Bristol Road,",
+    "addressLine6": "Greenford,"
+  },
+  "importerAddress": null,
+  "returnTo": {
+    "__typename": "AddressType",
+    "addressLine1": "(UK) Monster Energy UK Limited,",
+    "addressLine2": "Unit 51,",
+    "addressLine3": "Segro Park,",
+    "addressLine4": "Greenford Central,",
+    "addressLine5": "Bristol Road,",
+    "addressLine6": "Greenford,",
+    "addressLine7": "UB6 8UP,",
+    "addressLine8": "United Kingdom.",
+    "addressLine9": "(EU) Monster Energy Limited,",
+    "addressLine10": "South Bank House,",
+    "addressLine11": "Barrow Street,",
+    "addressLine12": "Dublin 4,"
+  },
+  "maxWeight": null,
+  "minWeight": null,
+  "catchWeightList": null,
+  "multiPackDetails": null,
+  "details": {
+    "__typename": "ProductDetailsType",
+    "energyEfficiency": {
+      "__typename": "EnergyEfficiencyType",
+      "class": null,
+      "energyClassUrl": null,
+      "productInfoDoc": null
+    },
+    "ingredients": [
+      "Carbonated Water",
+      "Acid (Citric Acid)",
+      "Taurine (0.4%)",
+      "Acidity Regulator (Sodium Citrates)",
+      "Flavourings",
+      "Panax Ginseng Root Extract (0.08%)",
+      "Sweeteners (Sucralose",
+      "Acesulfame K)",
+      "Preservatives (Sorbic Acid",
+      "Benzoic Acid)",
+      "Caffeine (0.03%)",
+      "L-Carnitine L-Tartrate (0.015%)",
+      "Vitamins (B3",
+      "B5",
+      "B6",
+      "B12)",
+      "Sodium Chloride",
+      "D-Glucuronolactone",
+      "Guarana Seed Extract (0.002%)",
+      "Inositol"
+    ],
+    "legalLabelling": [],
+    "packSize": [
+      {
+        "__typename": "PackSizeType",
+        "value": "4500",
+        "units": "ML"
+      }
+    ],
+    "allergens": [
+      {
+        "__typename": "AllergenInfoItemType",
+        "name": "Free From",
+        "values": [
+          "Cereals Containing Gluten",
+          "Crustaceans",
+          "Eggs",
+          "Fish",
+          "Lupin",
+          "Milk",
+          "Molluscs",
+          "Mustard",
+          "Nuts",
+          "Peanuts",
+          "Sesame",
+          "Soya",
+          "Sulphur Dioxide/Sulphites"
+        ]
+      }
+    ],
+    "marketing": [
+      "people are impossible to please. As soon as they get what they thought they wanted they always want more. Our team riders and Monster Girls are no different.... they've been dropping some hints lately.",
+      "They've been asking us for a new Monster drink. A little less sweet, lighter-tasting and zero calories, but with a full load of our Monster energy blend.",
+      "Sure, white is the new black. We went all out: Monster Energy Ultra",
+      "Unleash the Ultra Beast!"
+    ],
+    "storage": [
+      "Best before end - see base of can for dateStore in a cool dry place"
+    ],
+    "nutrition": [
+      {
+        "__typename": "NutritionalInfoItemType",
+        "name": "Typical Values",
+        "value1": "Per 100ml (%):",
+        "value2": "Per 500ml (%):",
+        "value3": null,
+        "value4": null
+      },
+      {
+        "__typename": "NutritionalInfoItemType",
+        "name": "Energy:",
+        "value1": "10kJ/(2kcal)",
+        "value2": "50kJ/(11kcal)",
+        "value3": null,
+        "value4": null
+      },
+      {
+        "__typename": "NutritionalInfoItemType",
+        "name": "Carbohydrate:",
+        "value1": "0.9g",
+        "value2": "4.4g (2%)",
+        "value3": null,
+        "value4": null
+      },
+      {
+        "__typename": "NutritionalInfoItemType",
+        "name": "of which sugars:",
+        "value1": "0g",
+        "value2": "0g (0%)",
+        "value3": null,
+        "value4": null
+      },
+      {
+        "__typename": "NutritionalInfoItemType",
+        "name": "Salt:",
+        "value1": "0.20g",
+        "value2": "1.0g (17%)",
+        "value3": null,
+        "value4": null
+      },
+      {
+        "__typename": "NutritionalInfoItemType",
+        "name": "Niacin (Vit B3):",
+        "value1": "8.5mg (53%)",
+        "value2": "43mg (266%)",
+        "value3": null,
+        "value4": null
+      },
+      {
+        "__typename": "NutritionalInfoItemType",
+        "name": "Pantothenic Acid (Vit B5):",
+        "value1": "4.2mg (70%)",
+        "value2": "21mg (350%)",
+        "value3": null,
+        "value4": null
+      },
+      {
+        "__typename": "NutritionalInfoItemType",
+        "name": "Vitamin B6:",
+        "value1": "0.80mg (57%)",
+        "value2": "4mg (286%)",
+        "value3": null,
+        "value4": null
+      },
+      {
+        "__typename": "NutritionalInfoItemType",
+        "name": "Vitamin B12:",
+        "value1": "2.5\u00b5g (100%)",
+        "value2": "13\u00b5g (500%)",
+        "value3": null,
+        "value4": null
+      },
+      {
+        "__typename": "NutritionalInfoItemType",
+        "name": "Vitamins:",
+        "value1": "-",
+        "value2": "-",
+        "value3": null,
+        "value4": null
+      },
+      {
+        "__typename": "NutritionalInfoItemType",
+        "name": "Fat, saturates, protein - negligible amount",
+        "value1": "-",
+        "value2": "-",
+        "value3": null,
+        "value4": null
+      }
+    ],
+    "specifications": [],
+    "otherNutritionInformation": null,
+    "hazardInfo": {
+      "__typename": "HazardInfoType",
+      "chemicalName": "",
+      "productName": "",
+      "signalWord": "",
+      "statements": [
+        "High caffeine content. Not recommended for children, pregnant or breastfeeding women, or people sensitive to caffeine (30mg/100ml). Consume responsibly"
+      ],
+      "symbolCodes": []
+    },
+    "guidelineDailyAmount": {
+      "__typename": "GuidelineDailyAmountType",
+      "title": null,
+      "dailyAmounts": []
+    },
+    "numberOfUses": null,
+    "preparationAndUsage": null,
+    "freezingInstructions": null,
+    "manufacturerMarketing": null,
+    "productMarketing": [
+      "people are impossible to please. As soon as they get what they thought they wanted they always want more. Our team riders and Monster Girls are no different.... they've been dropping some hints lately.",
+      "They've been asking us for a new Monster drink. A little less sweet, lighter-tasting and zero calories, but with a full load of our Monster energy blend.",
+      "Sure, white is the new black. We went all out: Monster Energy Ultra",
+      "Unleash the Ultra Beast!"
+    ],
+    "brandMarketing": null,
+    "otherInformation": [
+      "Contains added preservatives",
+      "Contains added intense sweeteners",
+      "Contains caffeine"
+    ],
+    "additives": [
+      "Free From Genetically Modified Ingredients",
+      "Contains Sweeteners"
+    ],
+    "warnings": [
+      "High caffeine content. Not recommended for children, pregnant or breastfeeding women, or people sensitive to caffeine (30mg/100ml). Consume responsibly"
+    ],
+    "netContents": "9 x 500ml \u212e",
+    "drainedWeight": null,
+    "safetyWarning": null,
+    "lowerAgeLimit": null,
+    "upperAgeLimit": null,
+    "healthmark": null,
+    "recyclingInfo": "Whole Packaging. Recycle",
+    "nappies": null,
+    "alcohol": null,
+    "cookingInstructions": {
+      "__typename": "CookingInstructionsType",
+      "oven": {
+        "__typename": "OvenCookingInstructionType",
+        "chilled": {
+          "__typename": "OvenCookingInstructionDetailType",
+          "time": null,
+          "instructions": [],
+          "temperature": null
+        },
+        "frozen": {
+          "__typename": "OvenCookingInstructionDetailType",
+          "time": null,
+          "instructions": [],
+          "temperature": null
+        }
+      },
+      "microwave": {
+        "__typename": "MicrowaveCookingInstructionType",
+        "chilled": {
+          "__typename": "MicrowaveCookingInstructionDetailType",
+          "detail": null,
+          "instructions": []
+        },
+        "frozen": {
+          "__typename": "MicrowaveCookingInstructionDetailType",
+          "detail": null,
+          "instructions": []
+        }
+      },
+      "cookingMethods": [],
+      "otherInstructions": [],
+      "cookingGuidelines": [],
+      "cookingPrecautions": []
+    },
+    "originInformation": [],
+    "dosage": null,
+    "preparationGuidelines": null,
+    "directions": null,
+    "features": [
+      "Zero Sugar",
+      "Taurine + Zero Sugar + L-Carnitine",
+      "This product is GMO free",
+      "This product is gluten free",
+      "This product is allergen free",
+      "This product is suitable for vegetarians/vegans"
+    ],
+    "healthClaims": null,
+    "boxContents": null,
+    "nutritionalClaims": [
+      "Zero Sugar"
+    ],
+    "components": [
+      {
+        "__typename": "AdditionalInfo",
+        "isLowEverydayPricing": false,
+        "isLowPricePromise": false
+      }
+    ]
+  },
+  "price": {
+    "__typename": "PriceType",
+    "actual": 10,
+    "unitPrice": 0.22,
+    "unitOfMeasure": "100ml"
+  },
+  "promotions": [],
+  "reviews({\"count\":10,\"offset\":0})": {
+    "__typename": "ReviewsType",
+    "info": {
+      "__typename": "ListInfoType",
+      "offset": 0,
+      "total": 1,
+      "page": 1,
+      "count": 1
+    },
+    "entries": [
+      {
+        "__typename": "ReviewType",
+        "rating": {
+          "__typename": "RatingType",
+          "value": 5,
+          "range": 5
+        },
+        "author": {
+          "__typename": "ReviewAuthorType",
+          "nickname": null,
+          "authoredByMe": false
+        },
+        "status": "Approved",
+        "summary": "Good Price",
+        "text": "Great Price, was on a clubcard offer, did have to order for click and collect though, as not in store!",
+        "syndicated": false,
+        "syndicationSource": {
+          "__typename": "SyndicationSourceType",
+          "name": null
+        },
+        "submissionDateTime": "2024-10-09T13:17:46.486Z",
+        "reviewId": "trn:tesco:ugc:rnr:uuid:35f2bfd3-914c-430d-8543-61cca192ed8c"
+      }
+    ],
+    "stats": {
+      "__typename": "ReviewStatsType",
+      "noOfReviews": 1,
+      "overallRating": 5
+    }
+  }
+}
