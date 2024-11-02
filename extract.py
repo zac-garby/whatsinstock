@@ -2,6 +2,7 @@
 
 import json
 import sys
+import itertools
 
 import bs4
 
@@ -20,7 +21,6 @@ def load_data(file):
 
 def reduce_data(products: list[dict]):
     """Remove unneeded keys."""
-
     for product in products:
         if product["__typename"] != "ProductType":
             continue
@@ -36,9 +36,11 @@ def reduce_data(products: list[dict]):
 
 def process_file(file):
     products = reduce_data(load_data(file))
-    for product in products:
-        print(json.dumps(product, indent=2))
+    return products
 
 
-for file in sys.argv[1:]:
-    process_file(file)
+all_products = list(
+    itertools.chain.from_iterable(process_file(file) for file in sys.argv[1:])
+)
+with open("all_product_info.json", "wt") as fp:
+    json.dump(all_products, fp, indent=2)
