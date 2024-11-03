@@ -5,8 +5,7 @@ from scipy.spatial import distance
 import json
 
 # Tuneable constants:
-starting_grams_per_step = 10
-price_to_gram_ratio = 1
+grams_per_step = 1
 goal = np.array((70, 10, 333, 15, 30, 80, 2000), dtype=np.double)
 origin = np.array((0, 0, 0, 0, 0, 0, 0), dtype=np.double)
 nutrient_weighting = 1 / goal
@@ -21,6 +20,16 @@ ingredients = {
     "croissants": np.array([15.8, 9.1, 49.1, 7.4, 2.5, 9, 280], dtype=np.double),
     "whole milk": np.array([3.6, 2.3, 4.7, 4.7, 0, 3.4, 40], dtype=np.double),
     "basmati rice": np.array([0.9, 0.1, 32.6, 0.1, 0.6, 3.6, 0], dtype=np.double),
+    "Green Peppers": np.array([0.3, 0.1, 2.6, 2.4, 1.6, 0.8, 0.01], dtype=np.double),
+    "Radish Pack": np.array([0.4, 0.1, 1.4, 1.4, 1.5, 0.7, 0.05], dtype=np.double),
+    "Brown Onions": np.array([0.2, 0, 7.9, 5.6, 1.4, 1.2, 0.01], dtype=np.double),
+    "Beansprouts": np.array([2.8, 0.2, 2.1, 2.1, 1.8, 2.5, 0.03], dtype=np.double),
+    "Lard": np.array([99.8, 44.0, 0, 0, 0, 0, 0.01], dtype=np.double),
+    "Pearl Barley": np.array([0.8, 0.2, 20.8, 0.2, 4.5, 3.0, 0.02], dtype=np.double),
+    "Red Split Lentils": np.array(
+        [0.8, 0.1, 11.7, 0.1, 6.1, 7.3, 0.01], dtype=np.double
+    ),
+    "Salt": np.array([0, 0, 0, 0, 0, 0, 40000.0], dtype=np.double),
 }
 
 
@@ -39,12 +48,11 @@ def find_optimal_ingredient(
 current_nutrients = origin.copy()
 current_distance = original_distance
 last_distance = original_distance + 1
+fraction_of_100_grams = grams_per_step / 100
 chosen_ingredients = {}
 
 while current_distance < last_distance:
     last_distance = current_distance
-    grams_per_step = max((current_distance / original_distance) * 10, 1)
-    fraction_of_100_grams = grams_per_step / 100
     optimal_ingredient = find_optimal_ingredient(
         current_nutrients, ingredients, goal, fraction_of_100_grams
     )
