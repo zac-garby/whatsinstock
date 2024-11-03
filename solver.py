@@ -78,7 +78,7 @@ female_target_nutrients = {
     "vit_c_mg": 40,
 }
 target_nutrients = male_target_nutrients
-grams_per_step = 1
+grams_per_step = 10
 
 
 # Load ingredient data.
