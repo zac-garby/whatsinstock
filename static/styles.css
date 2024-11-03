@@ -1,0 +1,40 @@
+* {
+    font-family: 'Comic Sans MS';
+}
+
+html, body {
+    background-color: rgb(30, 20, 20);
+}
+
+div.wrapper {
+    max-width: 800px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px 80px 20px 80px;
+    border-image: url("/img/pot.png");
+    border-image-slice: 121 147 169 169 fill;
+    border-image-width: 30px 48px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 35pt;
+    color: white;
+    text-shadow:
+        -2px -2px 0 red,
+        2px -2px 0 yellow,
+        -2px 2px 0 lime,
+        2px 2px 0 blue;
+}
+
+div.input-boxes {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+div.input-boxes div {
+
+}
