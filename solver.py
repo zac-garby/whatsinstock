@@ -30,6 +30,7 @@ ingredients = {
         [0.8, 0.1, 11.7, 0.1, 6.1, 7.3, 0.01], dtype=np.double
     ),
     "Salt": np.array([0, 0, 0, 0, 0, 0, 40000.0], dtype=np.double),
+    "Coriander": np.array([0.5, 0.1, 3.7, 0.9, 2.8, 2.1, 0.12], dtype=np.double),
 }
 
 
@@ -66,7 +67,7 @@ while current_distance < last_distance:
         chosen_ingredients.get(optimal_ingredient, 0) + grams_per_step
     )
     print(
-        f"Added {grams_per_step} grams of {optimal_ingredient}, giving a nutrient of:\n{current_nutrients}\nWe are now {current_distance} away."
+        f"Added {grams_per_step} grams of {optimal_ingredient}, giving a nutrient of:\n{current_nutrients}\nWe are now {current_distance:g} away."
     )
     # Safety check to prevent infinite loops.
     if current_nutrients[6] > 2500:
