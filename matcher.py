@@ -1,17 +1,23 @@
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
+from sentence_transformers import SentenceTransformer, util
+
+import numpy as np
 
 import math
 import sqlite3
 import csv
+import json
+import torch
 
 db = sqlite3.connect("food.db")
 db.row_factory = sqlite3.Row
-cur = db.cursor()
+
+model = SentenceTransformer("all-mpnet-base-v2")
 
 type ScrapedItem = Dict[str, str]
 type NutrItem = Dict[str, Any]
 
-def main():
+def main_old():
     with open("example.csv", mode="r", newline="") as file:
         scraped_items = csv.DictReader(file)
 
@@ -36,12 +42,78 @@ def main():
 
             print()
 
+def main():
+    with open("all_product_info.json", mode="r") as file:
+        data = json.load(file)
+
+    # later: try and guess this?
+    data = [ item for item in data if item["price"]["unitOfMeasure"] != "each" ]
+
+    if len(input("press enter to load embeddings, or anything else to regenerate them and quit:").strip()) > 0:
+        print("starting to embed names")
+        data_names = [ item["title"] for item in data ]
+        data_title_embs = model.encode(data_names, convert_to_tensor=True)
+        print("embedded all names")
+        torch.save(data_title_embs, "embeddings.pt")
+        return
+    else:
+        data_title_embs = torch.load("embeddings.pt")
+        print("loaded embeddings")
+
+    cur = db.cursor()
+    db_items = cur.execute("select * from foods")
+    mappings = {}
+
+    for item in db_items:
+        name = normalise_string(item["name"])
+        print(f"matching {name}:")
+
+        this_emb = model.encode(name, convert_to_tensor=True)
+        sim_scores = model.similarity(this_emb, data_title_embs)[0]
+        scores, idxs = torch.topk(sim_scores, k=5)
+
+        if scores[0] < 0.6:
+            print(f"  no match. best score was {scores[0]}")
+            continue
+
+        choice = data[idxs[0]]
+        print(f"  got match: {choice['title']}")
+        mappings[item["id"]] = choice["id"]
+
+    cur.close()
+
+    cur = db.cursor()
+
+    print("done all! updating sql database")
+
+    for item, choice in mappings.items():
+        print("updating database", f"update foods set tesco_item_id = {choice} where id = {item}")
+        cur.execute(f"update foods set tesco_item_id = {choice} where id = {item}")
+
+    cur.close()
+    db.commit()
+    db.close()
+
+def match_keywords(kws: List[str], s: str) -> Tuple[int, float]:
+    matches = sum(1 for k in kws if k in s)
+    counts = sum(len(k) for k in kws if k in s)
+    score = (counts * 100.0) / (len(s) - counts)
+    return (matches, score)
+
+def normalise_string(s: str) -> str:
+    kws = [ kw
+            for kw in map(use_keyword, s.split())
+            if kw is not None ]
+
+    return " ".join(kws)
+
 def use_keyword(kw: str) -> Optional[str]:
-    kw = kw.lower().replace("'", "")
+    kw = kw.lower().replace("'", "").replace(",", "")
 
     if not kw.isalpha() or kw in [
         "pack", "packet", "tesco", "all", "box", "carton",
-        "x", "litre", "liter"]:
+        "x", "litre", "liter", "each", "skin", "flesh",
+        "and", "homemade"]:
         return None
 
     return kw
