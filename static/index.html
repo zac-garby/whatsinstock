@@ -4,18 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What's in stock?</title>
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="wrapper">
         <h1>What's in stock?</h1>
         <form id="config">
-            <div class="input-boxes">
-                <div>
-                    <input type="number" name="carbs" value="0" />
-                    <label for="carbs">Carbs</label>
-                </div>
+            <!-- Fat -->
+            <div class="input-box">
+                <label for="fat">Fat (g)</label>
+                <input type="number" id="fat" name="fat" value="85" min="70" max="100" placeholder="e.g., 85" />
+            </div>
+
+            <!-- Saturated Fat -->
+            <div class="input-box">
+                <label for="saturatedFat">Saturated Fat (g)</label>
+                <input type="number" id="saturatedFat" name="saturatedFat" value="27" min="20" max="35" placeholder="e.g., 27" />
+            </div>
+
+            <!-- Carbohydrates -->
+            <div class="input-box">
+                <label for="carbs">Carbs (g)</label>
+                <input type="number" id="carbs" name="carbs" value="300" min="200" max="400" placeholder="e.g., 300" />
+            </div>
+
+            <!-- Free Sugars -->
+            <div class="input-box">
+                <label for="sugars">Sugars (g)</label>
+                <input type="number" id="sugars" name="sugars" value="30" min="20" max="35" placeholder="e.g., 30" />
+            </div>
+
+            <!-- Fibre -->
+            <div class="input-box">
+                <label for="fiber">Fibre (g)</label>
+                <input type="number" id="fiber" name="fiber" value="30" min="20" max="40" placeholder="e.g., 30" />
+            </div>
+
+            <!-- Protein -->
+            <div class="input-box">
+                <label for="protein">Protein (g)</label>
+                <input type="number" id="protein" name="protein" value="50" min="40" max="60" placeholder="e.g., 50" />
+            </div>
+
+            <!-- Sodium (Salt) -->
+            <div class="input-box">
+                <label for="sodium">Sodium (g)</label>
+                <input type="number" id="sodium" name="sodium" value="6" min="0" max="10" step="0.1" placeholder="e.g., 6" />
+            </div>
+
+            <!-- Submit Button -->
+            <div class="submit-box">
+                <button type="submit">Generate Optimal Soup</button>
             </div>
         </form>
     </div>
