@@ -14,6 +14,9 @@ db.row_factory = sqlite3.Row
 
 model = SentenceTransformer("all-mpnet-base-v2")
 
+prompt = "Nutritional information for the following specific grocery item at Tesco: "
+prompt_generic = "Supermarket nutritional information for the following generic grocery item description: "
+
 type ScrapedItem = Dict[str, str]
 type NutrItem = Dict[str, Any]
 
@@ -51,7 +54,7 @@ def main():
 
     if len(input("press enter to load embeddings, or anything else to regenerate them and quit:").strip()) > 0:
         print("starting to embed names")
-        data_names = [ item["title"] for item in data ]
+        data_names = [ prompt + item["title"] for item in data ]
         data_title_embs = model.encode(data_names, convert_to_tensor=True)
         print("embedded all names")
         torch.save(data_title_embs, "embeddings.pt")
@@ -68,17 +71,17 @@ def main():
         name = normalise_string(item["name"])
         print(f"matching {name}:")
 
-        this_emb = model.encode(name, convert_to_tensor=True)
+        this_emb = model.encode(prompt_generic + name, convert_to_tensor=True)
         sim_scores = model.similarity(this_emb, data_title_embs)[0]
         scores, idxs = torch.topk(sim_scores, k=5)
 
-        if scores[0] < 0.6:
+        if scores[0] < 0.8:
             print(f"  no match. best score was {scores[0]}")
             continue
 
         choice = data[idxs[0]]
-        print(f"  got match: {choice['title']}")
-        mappings[item["id"]] = choice["id"]
+        print(f"  got match: {choice['title']} ({scores[0]:.4f})")
+        mappings[item["id"]] = (choice["id"], scores[0])
 
     cur.close()
 
@@ -86,9 +89,9 @@ def main():
 
     print("done all! updating sql database")
 
-    for item, choice in mappings.items():
+    for item, (choice, score) in mappings.items():
         print("updating database", f"update foods set tesco_item_id = {choice} where id = {item}")
-        cur.execute(f"update foods set tesco_item_id = {choice} where id = {item}")
+        cur.execute(f"update foods set tesco_item_id = {choice}, match_sureness = {score} where id = {item}")
 
     cur.close()
     db.commit()
@@ -110,7 +113,7 @@ def normalise_string(s: str) -> str:
 def use_keyword(kw: str) -> Optional[str]:
     kw = kw.lower().replace("'", "").replace(",", "")
 
-    if not kw.isalpha() or kw in [
+    if kw in [
         "pack", "packet", "tesco", "all", "box", "carton",
         "x", "litre", "liter", "each", "skin", "flesh",
         "and", "homemade"]:
