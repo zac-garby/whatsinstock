@@ -9,47 +9,54 @@
 <body>
     <div class="wrapper">
         <h1>What's in stock?</h1>
-        <form id="config">
+        <form id="config" method="POST" action="/submit">
             <!-- Fat -->
             <div class="input-box">
-                <label for="fat">Fat (g)</label>
-                <input type="number" id="fat" name="fat" value="85" min="70" max="100" placeholder="e.g., 85" />
+                <label class="slider-label" for="fat">Fat (g)</label>
+                <input type="range" id="fat" name="fat" value="85" min="70" max="100" required oninput="this.nextElementSibling.value = this.value" />
+                <output class="slider-value">85</output>
             </div>
 
             <!-- Saturated Fat -->
             <div class="input-box">
-                <label for="saturatedFat">Saturated Fat (g)</label>
-                <input type="number" id="saturatedFat" name="saturatedFat" value="27" min="20" max="35" placeholder="e.g., 27" />
+                <label class="slider-label" for="saturatedFat">Saturated Fat (g)</label>
+                <input type="range" id="saturatedFat" name="saturatedFat" value="27" min="20" max="35" required oninput="this.nextElementSibling.value = this.value" />
+                <output class="slider-value">27</output>
             </div>
 
             <!-- Carbohydrates -->
             <div class="input-box">
-                <label for="carbs">Carbs (g)</label>
-                <input type="number" id="carbs" name="carbs" value="300" min="200" max="400" placeholder="e.g., 300" />
+                <label class="slider-label" for="carbs">Carbs (g)</label>
+                <input type="range" id="carbs" name="carbs" value="300" min="200" max="400" required oninput="this.nextElementSibling.value = this.value" />
+                <output class="slider-value">300</output>
             </div>
 
             <!-- Free Sugars -->
             <div class="input-box">
-                <label for="sugars">Sugars (g)</label>
-                <input type="number" id="sugars" name="sugars" value="30" min="20" max="35" placeholder="e.g., 30" />
+                <label class="slider-label" for="sugars">Sugars (g)</label>
+                <input type="range" id="sugars" name="sugars" value="30" min="20" max="35" required oninput="this.nextElementSibling.value = this.value" />
+                <output class="slider-value">30</output>
             </div>
 
             <!-- Fibre -->
             <div class="input-box">
-                <label for="fiber">Fibre (g)</label>
-                <input type="number" id="fiber" name="fiber" value="30" min="20" max="40" placeholder="e.g., 30" />
+                <label class="slider-label" for="fiber">Fibre (g)</label>
+                <input type="range" id="fiber" name="fiber" value="30" min="20" max="40" required oninput="this.nextElementSibling.value = this.value" />
+                <output class="slider-value">30</output>
             </div>
 
             <!-- Protein -->
             <div class="input-box">
-                <label for="protein">Protein (g)</label>
-                <input type="number" id="protein" name="protein" value="50" min="40" max="60" placeholder="e.g., 50" />
+                <label class="slider-label" for="protein">Protein (g)</label>
+                <input type="range" id="protein" name="protein" value="50" min="40" max="60" required oninput="this.nextElementSibling.value = this.value" />
+                <output class="slider-value">50</output>
             </div>
 
             <!-- Sodium (Salt) -->
             <div class="input-box">
-                <label for="sodium">Sodium (g)</label>
-                <input type="number" id="sodium" name="sodium" value="6" min="0" max="10" step="0.1" placeholder="e.g., 6" />
+                <label class="slider-label" for="sodium">Sodium (g)</label>
+                <input type="range" id="sodium" name="sodium" value="6" min="0" max="10" step="0.1" required oninput="this.nextElementSibling.value = this.value" />
+                <output class="slider-value">6</output>
             </div>
 
             <!-- Submit Button -->

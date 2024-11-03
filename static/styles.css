@@ -77,7 +77,10 @@ input[type="number"]:focus {
 .submit-box {
     grid-column: span 2;
     margin-top: 20px;
+    align-self: center; 
+    text-align: center; 
 }
+
 
 button {
     padding: 12px 24px;
@@ -94,4 +97,14 @@ button {
 button:hover {
     background: linear-gradient(45deg, #0056b3, #00a3d4);
     transform: translateY(-2px);
+}
+
+.slider-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slider-value {
+    margin-left: 10px;
+    font-weight: bold;
 }
