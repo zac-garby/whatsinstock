@@ -3,7 +3,7 @@
 }
 
 html, body {
-    background-image: url("/img/bg.jpg");
+    background-image: url("/static/img/bg.jpg");
     background-color: rgb(30, 20, 20);
     background-repeat: repeat; /* Ensures the background image tiles */
     background-size: auto; /* Adjust this based on your image's desired size */
@@ -16,7 +16,7 @@ div.wrapper {
     margin: auto;
     margin-top: 100px;
     padding: 20px 80px;
-    border-image: url("/img/pot.png");
+    border-image: url("/static/img/pot.png");
     border-image-slice: 121 147 169 169 fill;
     border-image-width: 30px 48px;
 }
