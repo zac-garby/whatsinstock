@@ -24,6 +24,8 @@ def reduce_data(products: list[dict]):
     for product in products:
         if product["__typename"] != "ProductType":
             continue
+        if not product["isForSale"]:
+            continue
         useful_product = {
             "id": product["id"],
             "title": product["title"],
