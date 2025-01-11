@@ -1,0 +1,4 @@
+.venv
+embeddings.pt
+init
+__pycache__
